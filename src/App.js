@@ -6,6 +6,7 @@ import Reviews from "./components/Reviews/Reviews";
 import New from "./components/New/New";
 import Menu from "./components/Menu/Menu";
 import Footer from "./components/Footer/Footer";
+import './App.css';
 
 const App = () => {
   return (
