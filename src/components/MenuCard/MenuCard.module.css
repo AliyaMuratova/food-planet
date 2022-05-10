@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+.card {
+    width: 264px;
+    height: 338px;
+    background: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    margin-right: 32px;
+    margin-bottom: 94px;
+}
+.card_button{
+    width: 200px;
+    height: 48.3px;
+    background: #254F4C;
+    border-radius: 40px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 147.19%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0 32px;
+}
+.card h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: #254F4C;
+    margin-top: 0;
+    margin-bottom: 9px;
+    text-align: center;
+}
+.desc {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+    margin: 0 16px;
+    padding: 10px;
+    text-align: center;
+}
+.count {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #254F4C;
+    margin: 0 auto 15px;
+    width: 64px;
+    height: 16px;
+}
+.count span img{
+    display: flex;
+    align-items: center;
+}
+.count_number {
+    padding: 0 12px;
+}
+.card_img{
+    margin: -70px 32px 16px;
+    height: 160px;
+}

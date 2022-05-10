@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+.advantages{
+    width: 1120px;
+    margin: 43px auto 0;
+}
+.title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 29px;
+    color: #254F4C;
+    margin-bottom: 42px;
+}
+.cards {
+    display: flex;
+    width: 1120px;
+    margin: 0 auto;
+}

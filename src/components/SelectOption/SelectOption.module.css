@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+.select_option {
+    width: 1152px;
+    height: 40px;
+    margin: 0 auto 112px;
+}
+.select {
+    float: right;
+}
+.select select{
+    padding: 10px 39px 10px 23px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #3A403F;
+}
+.select label {
+    margin-right: 28px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #1D3130;
+}

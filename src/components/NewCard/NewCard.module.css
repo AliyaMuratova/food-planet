@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+.card {
+    width: 264px;
+    height: 348.13px;
+    background: #2B4241;
+    border-radius: 40px;
+    margin-right: 32px;
+}
+.card_button{
+    width: 200px;
+    height: 48.3px;
+    background: #FF583E;
+    border-radius: 40px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 147.19%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0 32px;
+}
+
+.card_img {
+    margin: -50px 32px 16px;
+    height: 144px;
+}
+
+.card h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+    margin-top: 0;
+    margin-bottom: 12px;
+    text-align: center;
+}
+.desc {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    margin: 0 16px;
+    padding: 10px;
+    text-align: center;
+}
+.count {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+    margin: 0 auto 16px;
+    height: 16px;
+    width: 64px;
+}
+.count span img{
+    display: flex;
+    align-items: center;
+}
+.count_number {
+    padding: 0 12px;
+}

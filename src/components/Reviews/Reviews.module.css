@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+.reviews {
+    width: 1120px;
+    margin: 56px auto 88px;
+}
+.reviews_cards {
+    display: flex;
+}
+.reviews h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 29px;
+    color: #254F4C;
+    margin-top: 0;
+    margin-bottom: 19px;
+}
