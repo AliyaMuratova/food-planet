@@ -5,11 +5,11 @@ import MenuCards from "../MenuCards/MenuCards";
 
 const Menu = () => {
     return (
-        <div>
+        <>
             <MenuHeader/>
             <SelectOption/>
             <MenuCards/>
-        </div>
+        </>
     );
 };
 

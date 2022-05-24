@@ -4,14 +4,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 50px auto 50px;
+    margin: 50px auto 0;
+    padding: 0;
 }
 .cards li {
     list-style-type: none;
 }
 
 .button {
-    margin-top: -51px;
     width: 200px;
     height: 48.3px;
     border: 1px solid #FF583E;
@@ -22,4 +22,9 @@
     font-size: 14px;
     text-transform: uppercase;
     color: #FF583E;
+}
+.btn {
+    margin-top: -51px;
+    display: flex;
+    justify-content: center;
 }
