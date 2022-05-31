@@ -1,29 +1,21 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styles from "../NewCard/NewCard.module.css";
 import minus from "../../assets/images/Minus.svg";
 import plus from "../../assets/images/Plus.svg";
 
-const NewCard = (props) => {
-    const [count, setCount] = useState(0)
-    const increase = () => {
-        setCount(oldCount => oldCount + 1)
-    }
-    const decrease = () => {
-        setCount(oldCount => oldCount - 1)
-    }
-
+const NewCard = ({onAddItem, item}) => {
     return (
         <div className={styles.card}>
-            <img src={props.img} alt="" className={styles.card_img} />
-            <h4>{props.title}</h4>
-            <p className={styles.desc}>{props.desc}</p>
-            <h4>{props.price}</h4>
+            <img src={item.img} alt="" className={styles.card_img}/>
+            <h4>{item.name}</h4>
+            <p className={styles.desc}>{item.desc}</p>
+            <h4>{item.price} сом</h4>
             <div className={styles.count}>
-                <span><img onClick={decrease} src={minus} alt="" /></span>
-                <p className={styles.count_number}>{count}</p>
-                <span><img onClick={increase} src={plus} alt="" /></span>
+                <span><img src={minus} alt=""/></span>
+                <p className={styles.count_number}>{item.quantity = 1}</p>
+                <span><img src={plus} alt=""/></span>
             </div>
-            <button className={styles.card_button}>В корзину</button>
+            <button onClick={() => onAddItem(item)} className={styles.card_button}>В корзину</button>
         </div>
     );
 };

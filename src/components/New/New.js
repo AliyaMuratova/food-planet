@@ -2,11 +2,14 @@ import React from 'react';
 import NewHeader from "../NewHeader/NewHeader";
 import NewCards from "../NewCards/NewCards";
 
-const New = () => {
+const New = ({cartItems,onAddItem}) => {
     return (
         <div>
             <NewHeader/>
-            <NewCards/>
+            <NewCards
+                cartItems={cartItems}
+                onAddItem={onAddItem}
+            />
         </div>
     );
 };

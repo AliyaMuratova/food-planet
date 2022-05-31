@@ -54,7 +54,7 @@ footer ul li{
     margin-right: 60px;
     padding: 5px;
 }
-footer ul li:last-child {
+.last_child {
     margin-right: 0;
 }
 .svg_footer {

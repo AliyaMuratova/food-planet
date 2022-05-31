@@ -20,6 +20,7 @@
     text-transform: uppercase;
     color: #FFFFFF;
     margin: 0 32px;
+    cursor: pointer;
 }
 
 .card_img {

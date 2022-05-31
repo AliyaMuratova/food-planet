@@ -1,4 +1,6 @@
-
+a {
+    text-decoration: none;
+}
 
 header {
     display: flex;
@@ -25,12 +27,8 @@ header ul li{
     margin-right: 60px;
     padding: 5px;
 }
-header ul li:last-child {
+.last_child {
     margin-right: 0;
-}
-ul .header_menu {
-    display: flex;
-    align-items: center;
 }
 .items {
     font-weight: 700;
