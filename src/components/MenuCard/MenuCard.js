@@ -5,12 +5,27 @@ import plus from '../../assets/images/Plus.svg';
 
 
 const MenuCard = (props) => {
+
+    // let addToCart = () => {
+    //     let productsFromLocalStorage = {};
+    //     if (localStorage.getItem('cart')){
+    //         productsFromLocalStorage = JSON.parse(localStorage.getItem('cart'));
+    //     }
+    //
+    //     const product = {}
+    //     product[props.id]={
+    //         ...props
+    //     };
+    //
+    //     localStorage.setItem('cart', JSON.stringify({...productsFromLocalStorage, ...product}))
+    // };
+
     return (
         <div className={styles.card}>
             <img src={props.img} alt="" className={styles.card_img} />
             <h4>{props.title}</h4>
             <p className={styles.desc}>{props.desc}</p>
-            <h4>{props.price}</h4>
+            <h4>{props.price} сом</h4>
             <div className={styles.count}>
                 <span><img src={minus} alt="" /></span>
                 <p className={styles.count_number}>1</p>

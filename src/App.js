@@ -1,73 +1,29 @@
 import React, {useState} from "react";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import HomePage from "./pages/home-page";
+import HomePage from "./pages/HomePage/HomePage";
 import './App.css';
-import CartPage from "./pages/cart-page";
+import CartPage from "./pages/CartPage/CartPage";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
+import CheckoutForm from "./components/CheckoutForm/CheckoutForm";
 
 const App = () => {
-    const [cartItems, setCartItems] = useState([]);
 
-    const onAddItem = (product) => {
-        const ProductExist = cartItems.find((item) => item.id === product.id);
-        if (ProductExist) {
-            setCartItems(
-                cartItems.map(
-                    (item) => item.id === product.id ? {...ProductExist, quantity: ProductExist.quantity + 1} : item
-                )
-            );
-        } else {
-            setCartItems([...cartItems, {...product, quantity: 1}])
-        }
-    }
-
-
-    const onRemoveItem = (product) => {
-        const ProductExist = cartItems.find((item) => item.id === product.id);
-        if (ProductExist.quantity === 1) {
-            setCartItems(
-                cartItems.filter(
-                    (item) => item.id !== product.id
-                )
-            );
-        } else {
-            setCartItems(
-                cartItems.map(
-                    (item) => item.id === product.id ? {...ProductExist, quantity: ProductExist.quantity - 1} : item
-                )
-            );
-        }
-    }
-
-    const onRemoveFromCart = (productToRemove) => {
-        setCartItems(
-            cartItems.filter((product) => product !== productToRemove)
-        )
-    }
-
+    const [modalActive, setModalActive] = useState(false)
 
     return (
         <BrowserRouter>
-            <Header cartItems={cartItems}/>
+            <Header/>
             <Routes>
-                <Route path="/" element={
-                    <HomePage
-                        onAddItem={onAddItem}
-                        cartItems={cartItems}
-                    />
-                }
-                />
+                <Route path="/" element={<HomePage/>}/>
                 <Route path="/cart" element={
                     <CartPage
-                        onRemoveFromCart={onRemoveFromCart}
-                        onRemoveItem={onRemoveItem}
-                        onAddItem={onAddItem}
-                        cartItems={cartItems}
-                    />
-                }
+                        modalActive={modalActive}
+                        setModalActive={setModalActive}
+                    />}
                 />
             </Routes>
+            <CheckoutForm modalActive={modalActive} setModalActive={setModalActive}/>
             <Footer/>
         </BrowserRouter>
     );

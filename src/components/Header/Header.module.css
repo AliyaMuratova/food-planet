@@ -3,6 +3,8 @@ a {
 }
 
 header {
+    /*position: sticky;*/
+    /*top: 0;*/
     display: flex;
     align-items: center;
 }
@@ -12,13 +14,13 @@ header {
     height: 104px;
     display: flex;
     align-items: center;
+    background-color: white;
 }
 header ul {
     display: flex;
     padding-left: 0;
 }
 header ul li{
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
@@ -43,7 +45,7 @@ header ul li{
     padding-right: 14px;
 }
 .logo h3 {
-    font-family: 'Roboto', sans-serif;
+
     color: #254F4C;
     font-weight: 700;
     font-size: 20px;
@@ -52,7 +54,6 @@ header ul li{
     text-transform: uppercase;
 }
 .logo p {
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
@@ -68,4 +69,7 @@ header ul li{
 }
 .svg {
     margin-right: 8px;
+}
+.active {
+    color: #FF583E;
 }

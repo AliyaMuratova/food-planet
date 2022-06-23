@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {NavLink,Link} from "react-router-dom";
 import styles from './Header.module.css';
 import logo from '../../assets/images/logo.svg';
 import vector from '../../assets/images/Vector-1.svg';
@@ -7,7 +7,12 @@ import phone from '../../assets/images/Vector.svg';
 import basket from '../../assets/images/cart.svg';
 
 
-const Header = ({cartItems}) => {
+const Header = () => {
+
+    const storageData = JSON.parse(localStorage.getItem('cart'));
+    const countProducts =  Object.values(storageData  ? storageData : {});
+
+
     return (
         <header>
             <div className={styles.header}>
@@ -21,15 +26,15 @@ const Header = ({cartItems}) => {
                     </div>
                 </Link>
                 <ul>
-                    <Link to="/"><li>Главная</li></Link>
+                    <NavLink to="/"><li>Главная</li></NavLink>
                     <li><span className={styles.menu}>Меню</span><img
                         src={vector} alt=""/></li>
                     <li>Доставка</li>
                     <li>Контакты</li>
                     <li><img src={phone} alt=""
                              className={styles.svg}/><span>+996500405988</span></li>
-                    <Link to="/cart"><li className={styles.last_child}><img src={basket} alt="" className={styles.svg}/><span
-                        className={styles.items}>{cartItems.length}</span></li></Link>
+                    <NavLink to="/cart"><li className={styles.last_child}><img src={basket} alt="" className={styles.svg}/><span
+                        className={styles.items}>{countProducts.length}</span></li></NavLink>
                 </ul>
             </div>
         </header>

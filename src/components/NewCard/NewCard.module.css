@@ -1,11 +1,14 @@
 
-
 .card {
     width: 264px;
     height: 348.13px;
     background: #2B4241;
     border-radius: 40px;
     margin-right: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .card_button{
     width: 200px;
@@ -13,46 +16,59 @@
     background: #FF583E;
     border-radius: 40px;
     border: none;
-    font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 14px;
     line-height: 147.19%;
     text-transform: uppercase;
     color: #FFFFFF;
-    margin: 0 32px;
     cursor: pointer;
+    bottom: 0;
+}
+
+.card_button_added {
+    width: 200px;
+    height: 48.3px;
+    background: #FFFFFF;
+    border-radius: 40px;
+    border: 1px solid #FF583E;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 147.19%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+    bottom: 0;
 }
 
 .card_img {
-    margin: -50px 32px 16px;
-    height: 144px;
+    margin-top: -120px;
+    width: 210px;
+    height: 210px;
 }
 
 .card h4 {
-    font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 20px;
     line-height: 23px;
     color: #FFFFFF;
     margin-top: 0;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     text-align: center;
 }
 .desc {
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
     color: #FFFFFF;
-    margin: 0 16px;
     padding: 10px;
     text-align: center;
+    height: 89px;
+    margin-bottom: 8px;
 }
 .count {
     display: flex;
     align-items: center;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 15px;
     line-height: 18px;

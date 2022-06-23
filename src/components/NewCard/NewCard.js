@@ -1,21 +1,43 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from "../NewCard/NewCard.module.css";
 import minus from "../../assets/images/Minus.svg";
 import plus from "../../assets/images/Plus.svg";
+import classNames from 'classnames';
 
-const NewCard = ({onAddItem, item}) => {
-    return (
+
+const NewCard = (props) => {
+    const [style, setStyle] = useState("card_button");
+
+
+    let addToCart = () => {
+        let productsFromLocalStorage = {};
+        if (localStorage.getItem('cart')){
+            productsFromLocalStorage = JSON.parse(localStorage.getItem('cart'));
+        }
+
+        const product = {}
+        product[props.id]={
+            ...props
+        };
+
+        localStorage.setItem('cart', JSON.stringify({...productsFromLocalStorage, ...product}))
+
+        setStyle("card_button_added");
+
+    };
+
+        return (
         <div className={styles.card}>
-            <img src={item.img} alt="" className={styles.card_img}/>
-            <h4>{item.name}</h4>
-            <p className={styles.desc}>{item.desc}</p>
-            <h4>{item.price} сом</h4>
+            <img src={props.img} alt="" className={styles.card_img}/>
+            <h4>{props.name}</h4>
+            <p className={styles.desc}>{props.desc}</p>
+            <h4>{props.price} сом</h4>
             <div className={styles.count}>
-                <span><img src={minus} alt=""/></span>
-                <p className={styles.count_number}>{item.quantity = 1}</p>
-                <span><img src={plus} alt=""/></span>
+                <span ><img src={minus} alt=""/></span>
+                <p className={styles.count_number}>{props.quantity}</p>
+                <span ><img src={plus} alt=""/></span>
             </div>
-            <button onClick={() => onAddItem(item)} className={styles.card_button}>В корзину</button>
+            <button onClick={addToCart} className={styles.card_button}>В корзину</button>
         </div>
     );
 };

@@ -7,7 +7,7 @@ import clear from '../../assets/images/cart/circle-xmark-solid.svg';
 import trashcan from '../../assets/images/cart/trash-can-regular.svg'
 
 
-const Cart = ({cartItems, onRemoveItem, onAddItem, onRemoveFromCart}) => {
+const Cart = ({cartItems, onRemoveItem, onAddItem, onRemoveFromCart, modalActive, setModalActive}) => {
 
     const totalPrice = cartItems.reduce(
         (price, item) => price + item.quantity * item.price,
@@ -73,7 +73,7 @@ const Cart = ({cartItems, onRemoveItem, onAddItem, onRemoveFromCart}) => {
             </div>
 
             <div className={styles.checkout_button}>
-                <button className={styles.checkout}>Оформить заказ</button>
+                <button onClick={() => setModalActive(true)} className={styles.checkout}>Оформить заказ</button>
             </div>
         </div>
 
