@@ -24,11 +24,20 @@ header ul li{
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-    color: #1D3130;
     list-style-type: none;
     margin-right: 60px;
     padding: 5px;
 }
+
+ul li a {
+    color: #1D3130;
+}
+
+.active {
+    color: #FF583E;
+}
+
+
 .last_child {
     margin-right: 0;
 }
@@ -69,7 +78,4 @@ header ul li{
 }
 .svg {
     margin-right: 8px;
-}
-.active {
-    color: #FF583E;
 }

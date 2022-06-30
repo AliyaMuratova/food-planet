@@ -15,7 +15,13 @@ const CartPage = ({setModalActive}) => {
     const addToStorage = (key, data) => localStorage.setItem(key, data)
 
     const getProducts = () => {
+
         let storageData = parseProducts();
+
+        if(!storageData){
+            return;
+        }
+
         storageData = Object.values(storageData)
         setProductsFromStorage(storageData)
     }
@@ -28,7 +34,7 @@ const CartPage = ({setModalActive}) => {
     }
 
     const removeAllProducts = () => {
-        const updatedCart = productsFromStorage.length = 0
+        const updatedCart = {}
         addToStorage('cart', JSON.stringify(updatedCart))
         getProducts();
     }
@@ -87,6 +93,11 @@ const CartPage = ({setModalActive}) => {
 
     useEffect(getProducts, [])
 
+    // useEffect(() => {
+    //     localStorage.setItem('cart', JSON.stringify(productsFromStorage))
+    // }, [productsFromStorage])
+
+
     return (
         <div className={styles.shopping_cart}>
             <div className={styles.title}>
@@ -100,7 +111,6 @@ const CartPage = ({setModalActive}) => {
                 </div>
             </div>
             {
-
                productsFromStorage.length === 0 ?
                     (<div className={styles.empty_cart}>В корзине пусто</div>) :
                     (
