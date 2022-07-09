@@ -1,4 +1,3 @@
-
 .card {
     width: 264px;
     height: 348.13px;
@@ -26,6 +25,7 @@
     margin-bottom: 8px;
     text-align: center;
 }
+
 .desc {
     font-weight: 400;
     font-size: 14px;
@@ -36,6 +36,7 @@
     height: 89px;
     margin-bottom: 8px;
 }
+
 .count {
     display: flex;
     align-items: center;
@@ -48,10 +49,31 @@
     height: 16px;
     width: 64px;
 }
+
+.count span{
+    cursor: pointer;
+}
+
 .count span img{
     display: flex;
     align-items: center;
 }
+
 .count_number {
     padding: 0 12px;
+}
+
+.button{
+    width: 200px;
+    height: 48.3px;
+    background: #FF583E;
+    border-radius: 40px;
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 147.19%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+    bottom: 0;
 }

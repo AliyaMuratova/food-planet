@@ -23,6 +23,7 @@ const AddButton = (props) => {
     const handleClick = () => {
         props.addToCart();
         checkProduct();
+        props.checkProductQty()
     }
 
     useEffect(checkProduct, [])
@@ -30,7 +31,7 @@ const AddButton = (props) => {
     return (
         <button
             onClick={handleClick}
-            className={style ? styles.button_added : styles.button}>
+            className={style ? styles.button_added : `${props.className}`}>
             {style ? 'В корзине' : 'В корзину'}
         </button>
     );

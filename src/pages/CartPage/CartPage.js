@@ -1,15 +1,17 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import styles from './CartPage.module.css';
 import plus from '../../assets/images/cart/plus.svg';
 import minus from '../../assets/images/cart/minus.svg';
 import cart from '../../assets/images/cart.svg';
 import clear from '../../assets/images/cart/delete.svg';
 import trashcan from '../../assets/images/cart/trash-can-regular.svg'
+import {MyContext} from "../../App";
 
 
-const CartPage = ({setModalActive}) => {
+const CartPage = () => {
 
     const [productsFromStorage, setProductsFromStorage] = useState([]);
+    const {changeProductCount, setModalActive} = useContext(MyContext);
 
     const parseProducts = () => JSON.parse(localStorage.getItem('cart'));
     const addToStorage = (key, data) => localStorage.setItem(key, data)
@@ -28,15 +30,17 @@ const CartPage = ({setModalActive}) => {
 
     const deleteProduct = (product) => {
         let productsFromStorage = parseProducts();
-        delete productsFromStorage[product.id]
+        delete productsFromStorage[product.name]
         addToStorage('cart', JSON.stringify(productsFromStorage))
         getProducts();
+        changeProductCount();
     }
 
     const removeAllProducts = () => {
         const updatedCart = {}
         addToStorage('cart', JSON.stringify(updatedCart))
         getProducts();
+        changeProductCount();
     }
 
 
@@ -49,7 +53,7 @@ const CartPage = ({setModalActive}) => {
         }
 
         let productsFromStorage = parseProducts();
-        productsFromStorage[product.id] = product;
+        productsFromStorage[product.name] = product;
         addToStorage('cart', JSON.stringify(productsFromStorage))
 
         getProducts();
@@ -70,10 +74,11 @@ const CartPage = ({setModalActive}) => {
         }
 
         let productsFromStorage = parseProducts();
-        productsFromStorage[product.id] = product;
+        productsFromStorage[product.name] = product;
         addToStorage('cart', JSON.stringify(productsFromStorage))
 
         getProducts();
+        changeProductCount();
     }
 
     const totalPrice = productsFromStorage.reduce(

@@ -1,16 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {MyContext} from "../../App";
 import {NavLink, Link} from "react-router-dom";
 import styles from './Header.module.css';
 import logo from '../../assets/images/logo.svg';
 import vector from '../../assets/images/Vector-1.svg';
 import phone from '../../assets/images/Vector.svg';
 import basket from '../../assets/images/cart.svg';
+import HomePage from "../../pages/HomePage/HomePage";
 
 
 const Header = () => {
-
-    const storageData = (JSON.parse(localStorage.getItem('cart')))
-    const countProducts = Object.values(storageData ? storageData : {});
+    const {productCount} = useContext(MyContext);
 
     return (
         <header>
@@ -34,7 +34,7 @@ const Header = () => {
                              className={styles.svg}/><span>+996500405988</span></li>
                     <NavLink to="/cart">
                         <li className={styles.last_child}><img src={basket} className={styles.svg}/><span
-                            className={styles.items}>{countProducts.length}</span></li>
+                            className={styles.items}>{productCount}</span></li>
                     </NavLink>
                 </ul>
             </div>

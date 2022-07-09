@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styles from './CheckoutForm.module.css';
 import {useForm} from "react-hook-form";
+import {MyContext} from "../../App";
 
-const CheckoutForm = ({modalActive, setModalActive}) => {
-
+const CheckoutForm = () => {
+    const {modalActive, setModalActive} = useContext(MyContext);
     return (
         <div className={modalActive ? styles.active : styles.modal} onClick={() => setModalActive(false)}>
             <div className={styles.modal_content} onClick={e => e.stopPropagation()}>
