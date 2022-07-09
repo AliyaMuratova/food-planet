@@ -21,7 +21,7 @@ const Footer = () => {
                     <Link to="/"><li>Главная</li></Link>
                     <li>Меню</li>
                     <li>Доставка</li>
-                    <li>Контакты</li>
+                    <Link to="/contacts"><li>Контакты</li></Link>
                     <li className={styles.last_child}><img src={phone} alt="" className={styles.svg_footer} /><span>+996500405988</span></li>
                 </ul>
             </div>

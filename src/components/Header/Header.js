@@ -29,7 +29,7 @@ const Header = () => {
                     <li><span className={styles.menu}>Меню</span><img
                         src={vector} alt=""/></li>
                     <li>Доставка</li>
-                    <li>Контакты</li>
+                    <li><NavLink to="/contacts">Контакты</NavLink></li>
                     <li><img src={phone} alt=""
                              className={styles.svg}/><span>+996500405988</span></li>
                     <NavLink to="/cart">
