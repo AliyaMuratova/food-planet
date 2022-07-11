@@ -8,7 +8,7 @@ import CartPage from "./pages/CartPage/CartPage";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import CheckoutForm from "./components/CheckoutForm/CheckoutForm";
 import './App.css';
-import Contacts from "./pages/Contacts/Contacts";
+import ContactsPage from "./pages/ContactsPage/ContactsPage";
 
 export const MyContext = createContext('Default Value');
 
@@ -30,7 +30,7 @@ const App = () => {
                 <Header/>
                 <Routes>
                     <Route path="/" element={<HomePage/>}/>
-                    <Route path="/contacts" element={<Contacts/>}/>
+                    <Route path="/contacts" element={<ContactsPage/>}/>
                     <Route path="/cart" element={<CartPage/>}/>
                 </Routes>
                 <CheckoutForm/>
