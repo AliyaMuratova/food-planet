@@ -25,28 +25,46 @@ const NewCards = () => {
     useEffect(getProducts, [])
 
     return (
-        <div className={styles.cards}>
-            {
-                products.map((item, index) => {
-                    return(
-                        <ProductCard
-                            key={index}
-                            img={item.img}
-                            name={item.name}
-                            desc={item.desc}
-                            price={item.price}
-                            id={item.id}
-                            card={styles.card}
-                            cardImg={styles.card_img}
-                            description={styles.desc}
-                            count={styles.count}
-                            countNumber={styles.count_number}
-                            button={styles.button}
-                        />
-                    )
-                })
-            }
-        </div>
+        <>
+            <div className={styles.header}>
+                <p>Новинки</p>
+                <ul>
+                    <li>Пицца</li>
+                    <li>Бургер</li>
+                    <li>Суши</li>
+                    <li>Роллы</li>
+                    <li>Салаты</li>
+                    <li>Десерты</li>
+                    <li>Напитки</li>
+                </ul>
+            </div>
+
+            <ul className={styles.cards}>
+                {
+                    products.map((item, index) => {
+                        return(
+                            <li key={index}>
+                            <ProductCard
+                                key={index}
+                                img={item.img}
+                                name={item.name}
+                                desc={item.desc}
+                                price={item.price}
+                                id={item.id}
+                                card={styles.card}
+                                cardImg={styles.card_img}
+                                description={styles.desc}
+                                count={styles.count}
+                                countNumber={styles.count_number}
+                                button={styles.button}
+                            />
+                            </li>
+                        )
+                    })
+                }
+            </ul>
+
+        </>
     );
 };
 

@@ -20,6 +20,7 @@
     font-size: 14px;
     text-transform: uppercase;
     color: #FF583E;
+    cursor: pointer;
 }
 .btn {
     margin-top: -51px;
@@ -107,4 +108,55 @@
     text-transform: uppercase;
     color: #FFFFFF;
     cursor: pointer;
+}
+
+.header {
+    display: flex;
+    width: 1152px;
+    margin: 89px auto 0;
+}
+.header p {
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 29px;
+    color: #254F4C;
+    width: 112px;
+    height: 32px;
+    margin-right: 164px;
+
+}
+.header ul {
+    display: flex;
+}
+.header ul li {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1D3130;
+    list-style-type: none;
+    margin-right: 16px;
+    padding: 6px;
+}
+
+
+.select_option {
+    width: 1152px;
+    height: 40px;
+    margin: 0 auto 112px;
+}
+.select {
+    float: right;
+}
+.select select{
+    padding: 10px 39px 10px 23px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #3A403F;
+}
+.select label {
+    margin-right: 28px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #1D3130;
 }
