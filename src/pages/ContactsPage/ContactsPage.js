@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './ContactsPage.module.css';
 
 const ContactsPage = () => {
+    const [value, setValue] = useState('');
+
     return (
         <div className={styles.main}>
             <h1>Контакты</h1>
@@ -17,7 +19,7 @@ const ContactsPage = () => {
                 <div className={styles.data}>
                     <div className={styles.personal_data}>
                         <label htmlFor="name">Имя</label>
-                        <input className={styles.input} type="text" id="name" name="name" placeholder="Введите Ваше имя"/>
+                        <input onChange={(event) => setValue(event.target.value)} value={value} className={styles.input} type="text" id="name" name="name" placeholder="Введите Ваше имя"/>
                         <label htmlFor="lastname">Фамилия</label>
                         <input className={styles.input} type="text" id="lastname" name="lastname" placeholder="Введите Вашу фамилию"/>
                         <label htmlFor="phone">Телефон</label>

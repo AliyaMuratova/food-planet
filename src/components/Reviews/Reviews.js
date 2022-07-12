@@ -79,8 +79,6 @@ const Reviews = () => {
                 navigation
                 pagination={{clickable: true}}
                 className="mySwiper"
-                onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log('slide change')}
             >
                 {
                     data.map((user) => {
